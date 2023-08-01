@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    body{
+        background:linear-gradient(-135deg, #c850c0, #4158d0);
+    }
+    .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+           
+        }
+        .Fieldholder{
+            position: relative;
+            margin-bottom: 1.25em;
+        }
+       
+        input{
+            border: none;
+            border-bottom: 1px solid navy;
+            outline: none;
+            background: transparent;
+            width: 300px;
+        height: 25px;
+        }
+        label{
+            font-size: large;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: text;
+        }
+        button{
+            border-radius: 30px;
+            height: 40px;
+            border:transparent;
+            width: 300px;
+        }
+        /* input,label{
+            font-size: 1em;
+            width: 100%;
+            height: 55px;
+        } */
+        input:focus+label{
+            color: powderblue;
+            font-size: 1rem;
+            top: -25px;
+            pointer-events: none;
+            transition: 1s ease;
+        }
+       p{
+            color: whitesmoke;
+            text-align: center;
+        }
+        a {
+            margin-left: 100px;
+           margin-top: 0px;
+            /* color: powderblue; */
+            font-size: 25px;
+            
+        }
+        a:hover{ 
+            text-decoration: none;
+        }
+        .dent{
+            margin-top: 10px;
+        }
+        .DIV{
+            color: whitesmoke;
+            text-align: center;
+            margin-left: 50px;
+            font-size: 15px;
+        }
+    h1{
+        position: absolute;
+        top:10px;
+        background:linear-gradient(-135deg, #311a2f, #032cf8);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;
+    }
+    .hasnt{
+        position: absolute;
+        top: 50px; 
+        background:linear-gradient(-135deg, #311a2f, #032cf8);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;
+    }
+    .Indicator{
+        background:linear-gradient(-135deg, #311a2f, #032cf8);;
+        height: 200px;
+        width: 10%;
+        border-radius: 30px;
+        position: absolute;
+        top: 0;
+        mix-blend-mode: hue;
+    }
+    .AGE{
+        background:linear-gradient(-135deg, #311a2f, #032cf8);;
+        height: 200px;
+        width: 10%;
+        border-radius: 30px;
+        
+        /* position: absolute;
+        top: 10; */
+        mix-blend-mode: hue;
+    }
+    .MARRIAGE{
+        background:linear-gradient(-135deg, #bb15ad, #4d7cff);;
+        height: 200px;
+        width: 10%;
+        border-radius: 30px;
+        float: right;
+        /* position: absolute;
+        top: 10; */
+        mix-blend-mode: hue;
+    }
+    .FAGE{
+        background:linear-gradient(-135deg, #bb15ad, #4d7cff);;
+        height: 30px;
+        width: 5%;
+        border-radius: 100px;
+        position: absolute;
+        top: 10PX;
+        left: 700PX;
+        mix-blend-mode: hue;   
+    }
+    .MAGE{
+        background:linear-gradient(-135deg, #bb15ad, #4d7cff);;
+        height: 30px;
+        width: 5%;
+        border-radius: 100px;
+        position: absolute;
+        top: 50PX;
+        left: 900PX;
+        mix-blend-mode: hue;   
+    }
+    .MAG{
+        background:linear-gradient(-135deg, #bb15ad, #4d7cff);;
+        /* background-color: red; */
+        height: 30px;
+        width: 5%;
+        border-radius: 100px;
+        position: absolute;
+        top: 200PX;
+        left: 900PX;
+        mix-blend-mode: hue;   
+    }
+    .FAG{
+        background:linear-gradient(-135deg, #bb15ad, #4d7cff);;
+        height: 30px;
+        width: 5%;
+        border-radius: 100px;
+        position: absolute;
+        top: 400PX;
+        left: 900PX;
+        mix-blend-mode: hue;   
+    }
+    .EKELEBE{
+        background:linear-gradient(-135deg, #bb15ad, #4d7cff);;
+        height: 30px;
+        width: 5%;
+        border-radius: 100px;
+        position: absolute;
+        top: 10PX;
+        left: 600PX;
+        mix-blend-mode: hue;   
+    }
+    .POLICE{
+        background:linear-gradient(-135deg, #bb15ad, #4d7cff);;
+        height: 30px;
+        width: 5%;
+        border-radius: 100px;
+        position: absolute;
+        top: 50PX;
+        left: 400PX;
+        mix-blend-mode: hue;   
+    }
+    .MILITARY{
+        background:linear-gradient(-135deg, #bb15ad, #4d7cff);;
+        height: 30px;
+        width: 5%;
+        border-radius: 100px;
+        position: absolute;
+        top: 550PX;
+        left: 650PX;
+        mix-blend-mode: hue;   
+    }
+    .ARMY{
+        background:linear-gradient(-135deg, #bb15ad, #4d7cff);;
+        height: 30px;
+        width: 5%;
+        border-radius: 100px;
+        position: absolute;
+        top: 200PX;
+        left: 400PX;
+        mix-blend-mode: hue;   
+    }
+    .NAVY{
+        background:linear-gradient(-135deg, #bb15ad, #4d7cff);;
+        height: 30px;
+        width: 5%;
+        border-radius: 100px;
+        position: absolute;
+        top: 400PX; 
+        left: 400PX;
+        mix-blend-mode: hue;   
+    }
+    .faint{
+        color: purple;
+    }
+   
+    @media only screen and (max-width:600px){
+        h1,.hasnt{
+         margin-top: 100px;
+            /* visibility: collapse; */
+        }
+        label{
+            font-size: 15px;
+            margin-left: 50px;
+        }
+        a{
+            margin-left: 50px;
+            font-size: 15px;
+        }
+        button{
+            width: 100%;
+        }
+        input{
+            width: 50%;
+            margin-left: 50px;
+        }
+        .Indicator{
+            margin-left: 200px;
+            height: 50px;
+            margin-top: 50px;
+            mix-blend-mode: hue;
+            opacity: .20;
+        }
+        .AGE{
+            margin-left: 150px;
+            height: 50px;
+            position: absolute;
+            top: 200px;
+            mix-blend-mode: hue;
+            opacity: 0.20;
+            
+        }
+        .DIV{
+            margin-left: 0px;
+            width: 25%;
+            text-align: center;
+        }
+        .Or{
+            margin-top: 5px;
+        }
+        .hasnt{
+            width: 50%;
+            /* visibility: collapse; */
+        }
+        .MARRIAGE{
+            margin-left: 120px;
+            height: 50px;
+            position: absolute;
+            top: 300px;
+            mix-blend-mode: hue;
+            opacity: 0.20;
+        }
+        /* .FAGE{
+            background-color: red;
+            margin-left: 10px;
+            height: 50px;
+            position: absolute;
+            top: 0px;
+            mix-blend-mode: hue;
+            opacity: 100; 
+        } */
+    }
+    @media only screen and (max-width:900px){
+        h1,.hasnt{
+            margin-top: 0px;
+        }
+        input{
+            width: 100%;
+            margin-left: 10px;
+        }
+        
+    }
+
+   
+   </style>
+   <div class="background">
+   
+</div>
+   <div class="container">
+    <h1>welcome Back</h1>
+    <p class="hasnt">it has'nt been the same without you!</p>
+    <form method="post">
+      <div class="Fieldholder">
+          <input type="name" required>
+          <label><img src="LOG.png" width="15PX">Username</label>
+      </div><br>
+  
+      <div class="Fieldholder">
+          <input type="password" required>
+          <label><img src="pass.png" width="15PX">Password</label>
+      </div> 
+      <div class="WIN"><a href="#" class="faint">Login<img src="Next.png" width="20PX"></a></div>
+           <div class="dent">
+           
+            <div><a href="#" class="DIV">Don't have an account? sign Up</a></div>
+            <p class="Or">Or</p>
+             <button>Sign Up with Google<img src="google.png" width="10px"></button><br><br>
+             <button>Sign Up with Apple<img src="747.png" width="10px"></button>
+            </div>
+        </form>
+    </div>
+    <div class="Indicator"></div>
+    <div class="AGE"></div>
+    <div class="MARRIAGE"></div>
+    <div class="MAGE"></div>
+    <div class="FAGE"></div>
+    <div class="MAG"></div>
+    <div class="FAG"></div>
+
+    <div class="EKELEBE"></div>
+    <div class="POLICE"></div>
+    <div class="ARMY"></div>
+    <div class="SOLDIER"></div>
+    <div class="MILITARY"></div>
+    <div class="NAVY"></div>
+
+    
+</body>
+</html>
